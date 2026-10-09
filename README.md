@@ -2,7 +2,6 @@
 
 **Student:** Bazarkul Balnur  
 **Group:** SE-2529  
-**Live site:** https://YOUR-USERNAME.github.io/YOUR-REPO/
 
 ## Description
 A multi-page website with sky blue design and an animated background (floating bubbles and flowers).
@@ -19,5 +18,4 @@ A multi-page website with sky blue design and an animated background (floating b
 2. Open `index.html` in a browser (or use VS Code Live Server).
 3. Use the navbar to move between the pages.
 
-## Deployment
-GitHub Pages: Settings - Pages - Branch `main` - `/ (root)` - Save.
+

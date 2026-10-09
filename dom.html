@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOM Manipulation</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Part 1: Basics</a>
+  <a href="dom.html" class="active">Part 2: DOM</a>
+  <a href="events.html">Part 3: Events</a>
+  <a href="todo.html">Part 4: To-Do</a>
+</nav>
+<main>
+<h1>DOM Manipulation</h1>
+<p class="sub">Change content, styles and elements with JavaScript</p>
+
+<section class="card">
+  <h2>Task 2. Changing Content</h2>
+  <p id="text">This is the original text.</p>
+  <button id="changeTextBtn">Change text</button>
+  <button id="resetTextBtn">Reset</button>
+</section>
+<section class="card">
+  <h2>Task 3. Changing Styles</h2>
+  <div id="styleBox">I am a styled block. Press the buttons to change me!</div>
+  <button id="colorBtn">Change background color</button>
+  <button id="sizeBtn">Change font size</button>
+</section>
+<section class="card">
+  <h2>Task 4. Creating &amp; Removing Elements</h2>
+  <button id="addItemBtn">Add Item</button>
+  <button id="removeItemBtn" class="danger">Remove Item</button>
+  <ul id="itemList"></ul>
+  <p id="emptyMsg" class="hint">The list is empty. Press “Add Item”.</p>
+</section>
+</main>
+<footer>Assignment #6 · JavaScript Basics</footer>
+<script src="js/bg.js"></script>
+<script src="js/dom.js"></script>
+</body>
+</html>

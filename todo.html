@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do List</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Part 1: Basics</a>
+  <a href="dom.html">Part 2: DOM</a>
+  <a href="events.html">Part 3: Events</a>
+  <a href="todo.html" class="active">Part 4: To-Do</a>
+</nav>
+<main>
+<h1>To-Do List</h1>
+<p class="sub">Mini project: add, complete and delete tasks</p>
+
+<section class="card">
+  <h2>Task 8. My Tasks</h2>
+  <div class="row">
+    <input id="taskInput" type="text" placeholder="What needs to be done?" style="flex:1">
+    <button id="addTaskBtn">Add Task</button>
+  </div>
+  <ul id="todoList"></ul>
+  <p id="todoInfo" class="hint"></p>
+  <p class="hint">Click a task to mark it as completed.</p>
+</section>
+</main>
+<footer>Assignment #6 · JavaScript Basics</footer>
+<script src="js/bg.js"></script>
+<script src="js/todo.js"></script>
+</body>
+</html>

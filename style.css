@@ -1,0 +1,270 @@
+:root {
+  --sky: #87ceeb;
+  --sky-d: #3a9fd6;
+  --sky-dd: #1c6fa3;
+  --ice: #e8f6fd;
+  --ink: #16425f;
+  --pink: #ff8fb8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  background: linear-gradient(180deg, #bfe6fb 0%, #87ceeb 55%, #6bbbe6 100%) fixed;
+  line-height: 1.55;
+}
+
+#bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -120px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.25) 45%,
+    rgba(255, 255, 255, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  animation: rise linear infinite;
+}
+
+.flower {
+  position: absolute;
+  bottom: -80px;
+  animation: float linear infinite;
+  filter: drop-shadow(0 3px 4px rgba(22, 66, 95, 0.2));
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-120vh) translateX(var(--dx));
+  }
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-120vh) translateX(var(--dx)) rotate(var(--rot));
+  }
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+nav a {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--sky-dd);
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background: #fff;
+}
+
+nav a.active {
+  background: var(--sky-d);
+  color: #fff;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin: 1rem 0 0.3rem;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(28, 111, 163, 0.45);
+}
+
+.sub {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0 2rem;
+  text-shadow: 0 1px 6px rgba(28, 111, 163, 0.4);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  border: 2px solid #fff;
+  border-radius: 26px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 12px 30px rgba(28, 111, 163, 0.18);
+}
+
+.card h2 {
+  margin: 0 0 0.8rem;
+  color: var(--sky-dd);
+  font-size: 1.35rem;
+}
+
+button {
+  font: inherit;
+  font-weight: 800;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  background: var(--sky-d);
+  color: #fff;
+  box-shadow: 0 4px 0 var(--sky-dd);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+  background: #4fb0e6;
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--sky-dd);
+}
+
+button.danger {
+  background: var(--pink);
+  box-shadow: 0 4px 0 #d9608a;
+}
+
+input {
+  font: inherit;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 2px solid #bfe6fb;
+  background: #fff;
+  color: var(--ink);
+  min-width: 0;
+}
+
+input:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--sky-dd);
+  outline-offset: 2px;
+}
+
+#box,
+#styleBox,
+#hoverBox {
+  padding: 1.2rem;
+  border-radius: 20px;
+  margin: 0.8rem 0;
+  background: var(--ice);
+  transition: 0.3s;
+}
+
+#hoverBox {
+  height: 110px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  cursor: pointer;
+  background: #fff;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.out {
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--sky-dd);
+  min-height: 1.6em;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(28, 111, 163, 0.12);
+}
+
+#todoList li.done span {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.hint {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble,
+  .flower {
+    animation: none;
+    opacity: 0.5;
+    bottom: 20%;
+  }
+}

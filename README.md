@@ -1,4 +1,4 @@
-# Assignment #6. JavaScript Basics (DOM Manipulation & Events)
+# Assignment #4. JavaScript Basics (DOM Manipulation & Events)
 
 **Student:** Bazarkul Balnur  
 **Group:** SE-2529  

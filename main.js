@@ -8,10 +8,9 @@ document.getElementById("helloBtn").addEventListener("click", hello);
 
 //Task 1 
 function runVariables() {
-  const firstName = "Balnur";   // string
-  const age = 19;                // number
-  const isStudent = true;        // boolean
-  const a = 12, b = 5;
+  const firstName = "Balnur";  
+  const age = 19;                
+  const isStudent = true;        
 
   const lines = [
     `Types: ${typeof firstName}, ${typeof age}, ${typeof isStudent}`,

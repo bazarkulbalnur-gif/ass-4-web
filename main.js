@@ -10,8 +10,10 @@ document.getElementById("helloBtn").addEventListener("click", hello);
 function runVariables() {
   const firstName = "Balnur";  
   const age = 19;                
-  const isStudent = true;        
-
+  const isStudent = true;
+  
+const a = 12, b = 5;
+  
   const lines = [
     `Types: ${typeof firstName}, ${typeof age}, ${typeof isStudent}`,
     `${a} + ${b} = ${a + b}`,
